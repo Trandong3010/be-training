@@ -3,11 +3,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { UserDto } from '../../dto/UserDto';
 import { DoesUserExist } from 'src/core/guards/doesUserExist.guard';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
-
-class IUser {
-  readonly username: string;
-  readonly password: string;
-}
+import { IUser } from 'src/interfaces/User';
 
 @ApiTags('auth')
 @Controller('auth')

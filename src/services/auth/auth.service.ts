@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../user/users.service';
+import { IUser } from 'src/interfaces/User';
 
 @Injectable()
 export class AuthService {
@@ -28,8 +29,8 @@ export class AuthService {
     return result;
   }
 
-  public async login(data) {
-    const user = await this.userService.findOneByEmail(data.username);
+  public async login(data: IUser) {
+    const user = await this.userService.findOneByEmail(data.email);
     const token = await this.generateToken(data);
     const newUser = {
       username: user.username,
