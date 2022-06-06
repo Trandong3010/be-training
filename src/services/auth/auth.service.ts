@@ -32,8 +32,7 @@ export class AuthService {
   public async login(data: IUser) {
     const user = await this.userService.findOneByEmail(data.email);
 
-     const match = await this.comparePassword(data.password, user.password);
-     if (!match) {
+     if (data.password !== user.password) {
        return null;
      }
     const token = await this.generateToken(data);
