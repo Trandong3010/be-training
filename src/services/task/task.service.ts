@@ -17,8 +17,8 @@ export class TaskService {
     return await this.taskRepository.findOne<Tasks>({ where: { id } });
   }
 
-  async findAll(): Promise<Tasks> {
-    return await this.taskRepository.findOne<Tasks>();
+  async findAll(): Promise<Tasks[]> {
+    return await this.taskRepository.findAll<Tasks>();
   }
 
   async update(id: string, data: TaskDto): Promise<Tasks> {

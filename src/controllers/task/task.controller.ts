@@ -21,7 +21,7 @@ export class TaskController {
 
   @Get()
   @ApiResponse({ status: 403, description: 'Forbidden.' })
-  async findAll(): Promise<Tasks> {
+  async findAll(): Promise<Tasks[]> {
     return await this.taskService.findAll();
   }
 
