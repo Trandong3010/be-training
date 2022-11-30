@@ -22,10 +22,6 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 # BE Training
 
 Configured with:
@@ -36,48 +32,27 @@ Configured with:
   <summary>Setup & Run App</summary>
 
   1. Install the package
+  ```bash
     $ yarn install
-
+  ```
   2. Create the database in your new postgresql and seed it with data:
+  ```bash
     $ npx prisma migrate dev --name init
     $ npx prisma db seed
+  ```
   3. Now you'll be able to access this database locally via a visual editor and verify the table have been created.
+  ```bash
     $ npx prisma studio
+  ```
   4.Finally, run the app:
+  ```bash
     $ yarn start:dev
+  ```
+  5. user login
+  ```bash
+  admin@training.io/123456
+  ```
 </details>
-
-## Installation
-
-```bash
-$ yarn install
-```
-
-## Running the app
-
-```bash
-# development
-$ yarn start
-
-# watch mode
-$ yarn start:dev
-
-# production mode
-$ yarn start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn test
-
-# e2e tests
-$ yarn test:e2e
-
-# test coverage
-$ yarn test:cov
-```
 
 ## Support
 
